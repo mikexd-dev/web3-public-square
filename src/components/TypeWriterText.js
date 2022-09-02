@@ -214,7 +214,7 @@ const TypeWriterText = () => {
   return (
     <>
       <Title>
-        Curated space in Singpoare for talents to
+        Curated space in Singapore for talents to
         <Typewriter
           options={{
             autoStart: true,
@@ -240,16 +240,15 @@ const TypeWriterText = () => {
           </SubTitle>
           <SubTitleXXS>Business Centre & Auditorium</SubTitleXXS>
         </ColumnContainer>
-
         <ColumnContainer id="col2">
           <SubTitleXXS>When</SubTitleXXS>
           <SubTitle style={{ width: "100%" }}>Sept 27, 2022</SubTitle>
           <Countdown date={"2022-09-27T18:00:00"} renderer={renderer} />
         </ColumnContainer>
-
         <ColumnContainer>
           <Button text="RSVP" link="https://lu.ma/qb6536tz" />
         </ColumnContainer>
+        g
       </RowContainer>
     </>
   );
