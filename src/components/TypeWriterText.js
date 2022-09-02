@@ -248,7 +248,6 @@ const TypeWriterText = () => {
         <ColumnContainer>
           <Button text="RSVP" link="https://lu.ma/qb6536tz" />
         </ColumnContainer>
-        g
       </RowContainer>
     </>
   );
