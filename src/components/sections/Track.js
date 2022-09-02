@@ -228,7 +228,7 @@ const Team = () => {
       <Suspense fallback={<Loading />}>
         <Container>
           <GradientText> Tracks</GradientText>
-          <Scene top={generateTop()} left={generateLeft()} />
+          {/* <Scene top={generateTop()} left={generateLeft()} /> */}
         </Container>
       </Suspense>
 
@@ -253,7 +253,7 @@ const Team = () => {
         />
         <MemberComponent
           img={web3DesignImage}
-          name="Product & Design in Web3"
+          name="Rethinking Relationships between Regulator and Regulated"
         />
         <MemberComponent img={futureOfWorkImage} name="Future of Work" />
       </Container>

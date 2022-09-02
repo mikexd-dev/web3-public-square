@@ -235,8 +235,10 @@ const TypeWriterText = () => {
       <RowContainer>
         <ColumnContainer id="col1">
           <SubTitleXXS>Where</SubTitleXXS>
-          <SubTitle style={{ width: "100%" }}>Central Singapore</SubTitle>
-          <SubTitleXXS>Location TBA</SubTitleXXS>
+          <SubTitle style={{ width: "100%" }}>
+            WeWork @ 21 Collyer Quay
+          </SubTitle>
+          <SubTitleXXS>Business Centre & Auditorium</SubTitleXXS>
         </ColumnContainer>
 
         <ColumnContainer id="col2">

@@ -1,15 +1,14 @@
 import React, { lazy, Suspense } from "react";
 import styled from "styled-components";
 
-import kishoreImg from "../../assets/Kishore Photo.jpeg";
-import chuckImg from "../../assets/chuck.jpg";
-import minaImg from "../../assets/Mina Logo.jpeg";
+import kishoreImg from "../../assets/kishore-round.png";
+import chuckImg from "../../assets/chuck-round.png";
+import minaImg from "../../assets/mina-round.png";
+import guangImg from "../../assets/guangyi-round.png";
+import futureImg from "../../assets/future-round.png";
 import saisonImg from "../../assets/Saison Capital.png";
 import monkeDAOImg from "../../assets/MonkeDAO.jpeg";
-import gitcoinImg from "../../assets/Gitcoin logo.png";
-import img7 from "../../assets/Nfts/bighead-6.svg";
-import img8 from "../../assets/Nfts/bighead-7.svg";
-import img9 from "../../assets/Nfts/bighead-8.svg";
+import gitcoinImg from "../../assets/gitcoin-round.png";
 import Loading from "../Loading";
 // import ConfettiComponent from '../Confetti';
 import Scene from "../Scene";
@@ -134,11 +133,11 @@ const GradientText = styled.div`
 const ImageContainer = styled.div`
   width: 80%;
   margin: 0 auto;
-  background-color: ${(props) => props.theme.carouselColor};
-  border: 1px solid ${(props) => props.theme.text};
+  // background-color: ${(props) => props.theme.carouselColor};
+  // border: 1px solid ${(props) => props.theme.text};
   padding: 1rem;
 
-  border-radius: 20px;
+  border-radius: 40%;
   cursor: pointer;
 
   img {
@@ -166,11 +165,17 @@ const Position = styled.h2`
   font-weight: 400;
 `;
 
+const ImageDiv = styled.img`
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+`;
+
 const MemberComponent = ({ img, name = " ", position = " " }) => {
   return (
     <Item>
       <ImageContainer>
-        <img width={500} height={400} src={img} alt={name} />
+        <ImageDiv src={img} alt={name} />
       </ImageContainer>
       <Name>{name}</Name>
       <Position>{position}</Position>
@@ -197,10 +202,20 @@ const Team = () => {
         <MemberComponent
           img={chuckImg}
           name="Chuck Lam"
-          position="WAGMI Finance"
+          position="Blockchaintel"
         />
         <MemberComponent img={minaImg} name="Mina Foundation" position="" />
-        <MemberComponent img={saisonImg} name="Saison Capital" position="" />
+        <MemberComponent
+          img={guangImg}
+          name="Guang-yi"
+          position="Ethereum Foundation"
+        />
+        <MemberComponent
+          img={futureImg}
+          name="Jeremy"
+          position="MonkeDAO & Gitcoin"
+        />
+        {/* <MemberComponent img={saisonImg} name="Saison Capital" position="" /> */}
         <MemberComponent img={monkeDAOImg} name="MonkeDAO" position="" />
         <MemberComponent img={gitcoinImg} name="Gitcoin" position="" />
         {/* <MemberComponent img={img5} name="DEATHSTROKE" position="artist" />
