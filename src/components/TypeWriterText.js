@@ -251,9 +251,6 @@ const TypeWriterText = () => {
           <Button text="RSVP" link="https://lu.ma/qb6536tz" />
         </ColumnContainer>
       </RowContainer>
-      {/* <RowContainer style={{ justifyContent: "center" }}>
-        <Countdown date={"2022-09-27T18:00:00"} renderer={renderer} />
-      </RowContainer> */}
     </>
   );
 };
