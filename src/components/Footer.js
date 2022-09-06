@@ -206,7 +206,8 @@ const Footer = () => {
       </Container>
       <Bottom>
         <span>
-          &copy; {new Date().getFullYear()} Menyala. All rights reserved.
+          &copy; {new Date().getFullYear()} web3PublicSquare. All rights
+          reserved.
         </span>
       </Bottom>
     </Section>

@@ -1,17 +1,14 @@
 import React, { lazy, Suspense } from "react";
 import styled from "styled-components";
 
-import kishoreImg from "../../assets/kishore-round.png";
-import chuckImg from "../../assets/chuck-round.png";
-import minaImg from "../../assets/mina-round.png";
-import guangImg from "../../assets/guangyi-round.png";
-import futureImg from "../../assets/future-round.png";
-import saisonImg from "../../assets/Saison Capital.png";
+import kishoreImg from "../../assets/Superscrypt logo.jpeg";
+import ethImg from "../../assets/eth-foundation.png";
 import monkeDAOImg from "../../assets/MonkeDAO.jpeg";
+import menyalaImg from "../../assets/menyala.png";
 import gitcoinImg from "../../assets/gitcoin-round.png";
+import minaImg from "../../assets/mina-round.png";
+import affinidiImg from "../../assets/affinidi.png";
 import Loading from "../Loading";
-// import ConfettiComponent from '../Confetti';
-import Scene from "../Scene";
 
 const ConfettiComponent = lazy(() => import("../Confetti"));
 
@@ -82,7 +79,7 @@ const Item = styled.div`
 `;
 
 const GradientText = styled.div`
-  width: 30%;
+  width: 80%;
   // padding: 1rem 0;
   background: linear-gradient(-45deg, #f89056, #fbdc84, #fbdcbb);
   background-size: 300%;
@@ -190,47 +187,17 @@ const Team = () => {
         <ConfettiComponent />{" "}
       </Suspense>
       <Container>
-        <GradientText> Speakers & Friends </GradientText>
+        <GradientText> Friends of Public Square </GradientText>
       </Container>
 
       <Container>
-        <MemberComponent
-          img={kishoreImg}
-          name="Kishore Bhatia"
-          position="Core Technology Contributor, Superscrypt"
-        />
-        <MemberComponent
-          img={chuckImg}
-          name="Chuck Lam"
-          position="Blockchaintel"
-        />
         <MemberComponent img={minaImg} name="Mina Foundation" position="" />
-        <MemberComponent
-          img={guangImg}
-          name="Guang-yi"
-          position="Ethereum Foundation"
-        />
-        <MemberComponent
-          img={futureImg}
-          name="Jeremy"
-          position="MonkeDAO & Gitcoin"
-        />
-        {/* <MemberComponent img={saisonImg} name="Saison Capital" position="" /> */}
-        <MemberComponent img={monkeDAOImg} name="MonkeDAO" position="" />
+        <MemberComponent img={kishoreImg} name="Superscrypt" position="" />
+        <MemberComponent img={affinidiImg} name="Affinidi" position="" />
         <MemberComponent img={gitcoinImg} name="Gitcoin" position="" />
-        {/* <MemberComponent img={img5} name="DEATHSTROKE" position="artist" />
-        <MemberComponent
-          img={img6}
-          name="LAZY KONG"
-          position="social media manager"
-        />
-        <MemberComponent
-          img={img7}
-          name="CYBER PUNK"
-          position="Blockchain Specialist"
-        />
-        <MemberComponent img={img8} name="MONK" position="Web3 Developer" />
-        <MemberComponent img={img9} name="BANANA" position="Graphic Designer" /> */}
+        <MemberComponent img={menyalaImg} name="Menyala" position="" />
+        <MemberComponent img={monkeDAOImg} name="MonkeDAO" position="" />
+        {/* <MemberComponent img={ethImg} name="Ethereum Foundation" position="" /> */}
       </Container>
     </Section>
   );

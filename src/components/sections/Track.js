@@ -52,6 +52,7 @@ const Container = styled.div`
   @media (max-width: 48em) {
     width: 90%;
     justify-content: center;
+    column-gap: 50px;
   }
 `;
 
@@ -255,7 +256,10 @@ const Team = () => {
           img={web3DesignImage}
           name="Rethinking Relationships between Regulator and Regulated"
         />
-        <MemberComponent img={futureOfWorkImage} name="Future of Work" />
+        <MemberComponent
+          img={futureOfWorkImage}
+          name="DAOs: The Future of Work"
+        />
       </Container>
     </Section>
   );

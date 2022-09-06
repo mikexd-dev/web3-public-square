@@ -6,7 +6,7 @@ import Button from "./Button";
 
 const Title = styled.h1`
   font-size: ${(props) => props.theme.fontxxxl};
-  text-transform: capitalize;
+  // text-transform: capitalize;
   width: 80%;
   color: ${(props) => props.theme.text};
   align-self: flex-start;
@@ -224,7 +224,7 @@ const TypeWriterText = () => {
             typewriter
               .typeString(`<span class="text-1">learn, </span>`)
               .pauseFor(500)
-              .typeString(`<span class="text-2"> build </span>`)
+              .typeString(`<span class="text-2"> buidl </span>`)
               .pauseFor(500)
               .typeString(`<span class="text-3">and network</span>`)
               .pauseFor(500)
@@ -242,7 +242,7 @@ const TypeWriterText = () => {
         </ColumnContainer>
         <ColumnContainer id="col2">
           <SubTitleXXS>When</SubTitleXXS>
-          <SubTitle style={{ width: "100%" }}>Sept 27, 2022</SubTitle>
+          <SubTitle style={{ width: "100%" }}>Sept 27, 2022 @6:30pm</SubTitle>
           <Countdown date={"2022-09-27T18:00:00"} renderer={renderer} />
         </ColumnContainer>
         <ColumnContainer>

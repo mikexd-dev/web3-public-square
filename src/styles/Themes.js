@@ -37,7 +37,7 @@ export const dark = {
   fontxs: "0.75em",
   fontsm: "0.875em",
   fontmd: "1em", // 1em = 16px
-  fontlg: "1.5em",
+  fontlg: "1.3em",
   fontxl: "2.1em",
   fontxxl: "3em",
   fontxxxl: "4em",
