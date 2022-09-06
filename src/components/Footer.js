@@ -171,14 +171,14 @@ const Footer = () => {
             >
               <Instagram />
             </a> */}
-            <a
+            {/* <a
               href="https://www.discord.com/Web3PublicSquare"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="discord"
             >
               <Discord />
-            </a>
+            </a> */}
             <a
               href="https://twitter.com/w3_publicsquare"
               target="_blank"
