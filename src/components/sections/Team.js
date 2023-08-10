@@ -7,7 +7,10 @@ import monkeDAOImg from "../../assets/MonkeDAO.jpeg";
 import menyalaImg from "../../assets/menyala.png";
 import gitcoinImg from "../../assets/gitcoin-round.png";
 import minaImg from "../../assets/mina-round.png";
+import polygonImg from "../../assets/polygon.png";
 import affinidiImg from "../../assets/affinidi.png";
+import blackImg from "../../assets/blackdog.png";
+import singporeImg from "../../assets/singpore.png";
 import Loading from "../Loading";
 
 const ConfettiComponent = lazy(() => import("../Confetti"));
@@ -168,15 +171,23 @@ const ImageDiv = styled.img`
   border-radius: 50%;
 `;
 
-const MemberComponent = ({ img, name = " ", position = " " }) => {
+const MemberComponent = ({ img, name = " ", position = " ", link = "" }) => {
   return (
     <Item>
-      <ImageContainer>
-        <ImageDiv src={img} alt={name} />
-      </ImageContainer>
-      <Name>{name}</Name>
-      <Position>{position}</Position>
-    </Item>
+    <ImageContainer>
+      <ImageDiv src={img} alt={name} />
+    </ImageContainer>
+    <Name>
+      {link ? (
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          {name}
+        </a>
+      ) : (
+        name
+      )}
+    </Name>
+    <Position>{position}</Position>
+  </Item>
   );
 };
 
@@ -191,12 +202,28 @@ const Team = () => {
       </Container>
 
       <Container>
-        <MemberComponent img={minaImg} name="Mina Foundation" position="" />
-        <MemberComponent img={kishoreImg} name="Superscrypt" position="" />
-        <MemberComponent img={affinidiImg} name="Affinidi" position="" />
-        <MemberComponent img={gitcoinImg} name="Gitcoin" position="" />
-        <MemberComponent img={menyalaImg} name="Menyala" position="" />
-        <MemberComponent img={monkeDAOImg} name="MonkeDAO" position="" />
+      <MemberComponent
+  img={minaImg}
+  name="Mina Foundation"
+  position=""
+  link="https://minaprotocol.com/" // Replace with the actual link
+/>
+<MemberComponent
+  img={kishoreImg}
+  name="Superscrypt"
+  position=""
+  link="https://www.superscrypt.xyz/" // Replace with the actual link
+/>
+        <MemberComponent img={affinidiImg} name="Affinidi" position="" 
+        link="https://www.affinidi.com/"
+         />
+        <MemberComponent img={gitcoinImg} name="Gitcoin" position="" link="https://www.gitcoin.co/" />
+        <MemberComponent img={menyalaImg} name="Menyala" position="" link="https://www.menyala.com/" />
+        <MemberComponent img={monkeDAOImg} name="MonkeDAO" position="" link="https://monkedao.io/" />
+        <MemberComponent img={polygonImg} name="Polygon" position="" link="https://polygon.technology/" />
+        <MemberComponent img={menyalaImg} name="Economics Design" position="" link="https://economicsdesign.com/" />
+        <MemberComponent img={blackImg} name="Blockdaemon" position="" link="https://www.blockdaemon.com/" />
+        <MemberComponent img={singporeImg} name="ETH Singapore" position="" link="https://www.ethereumsingapore.com/" />
         {/* <MemberComponent img={ethImg} name="Ethereum Foundation" position="" /> */}
       </Container>
     </Section>

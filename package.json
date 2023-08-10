@@ -22,6 +22,7 @@
     "react-responsive": "^9.0.0-beta.10",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "react-simple-typewriter": "^5.0.1",
     "react-three-fiber": "^6.0.13",
     "react-use": "^17.3.2",
     "react-video-looper": "^1.0.16",
