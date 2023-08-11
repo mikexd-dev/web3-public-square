@@ -1,7 +1,6 @@
 import GlobalStyles from "./styles/GlobalStyles";
 import { light, dark } from "./styles/Themes";
 import { ThemeProvider } from "styled-components";
-
 // import { lazy, Suspense } from "react";
 // import Loading from "./components/Loading";
 
@@ -29,27 +28,47 @@ import Showcase from "./components/sections/Showcase";
 import Faq from "./components/sections/Faq";
 import Track from "./components/sections/Track";
 import ScrollToTop from "./components/ScrollToTop";
-
+import Tokenomics from "./pages/Tokenomics";
+import Economicdesign from "./components/sections/Economicdesign";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+  Routes,
+} from "react-router-dom";
 function App() {
   return (
-    <main>
+ <main>
       <GlobalStyles />
       <ThemeProvider theme={dark}>
-        {/* <Suspense fallback={<Loading />}> */}
-        {/* <Navigation /> */}
+        {/* <Tokenomics /> */}
         <Home />
         <BannerSG />
         <Agenda />
         <Track />
+        <Team />
+        <Footer />
+        <ScrollToTop />
+        </ThemeProvider>
+
+
+
+
+
+
+
+
+         {/* <Suspense fallback={<Loading />}> */}
+        {/* <Navigation /> */}
         {/* <About />
         <Roadmap />
         <Showcase /> */}
-        <Team />
         {/* <Faq /> */}
-        <Footer />
         {/* <ScrollToTop scrollPosition={y}/> */}
-        <ScrollToTop /> {/* </Suspense> */}
-      </ThemeProvider>
+        {/* </Suspense> */}
+     
+      
     </main>
   );
 }

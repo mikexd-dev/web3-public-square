@@ -1,13 +1,16 @@
 import React, { lazy, Suspense, } from "react";
 import styled from "styled-components";
-
+import { BrowserRouter as Router, Route, Switch, Link, Navigate } from 'react-router-dom';
 import smartContractImage from "../../assets/smart-contract.png";
 import minaImage from "../../assets/Mina Logo.jpeg";
 import web3DesignImage from "../../assets/design-web3.png";
 import futureOfWorkImage from "../../assets/future-of-work.png";
 import Loading from "../Loading";
+
+
 // import ConfettiComponent from '../Confetti';
 import { useMediaQuery } from "react-responsive";
+import Tokenomics from "../../pages/Tokenomics";
 const Scene = lazy(() => import("../Scene"));
 
 const Section = styled.section`
@@ -26,7 +29,7 @@ const Title = styled.h1`
   text-transform: capitalize;
   color: #FFF;
   display: flex;
-font-size: 6em;
+font-size: 3em;
     text-transform: capitalize;
     color:${props => props.color || props.theme.color};;
     display: flex;
@@ -42,16 +45,35 @@ font-size: 6em;
     height: 160px;
     float: right;
     margin-right: -28px;
-  @media (max-width: 40em) {
-    font-size: 4em;
-  }
-  @media (max-width: 1580px) {
-    font-size: 4em;
-  }
+    @media (max-width: 117.75em) { 
+      font-size:3em;
+    }
+    @media (max-width: 90.625em) { 
+      font-size: 3em; 
+     }
+     
+     @media (max-width: 85em) {
+      font-size:3em;
+        padding: 50px 30px;
+        border-radius: 40px;
+        margin-top: -20px;
+        margin-right: 0px;
+        margin-left: 0px;
+     }
+     @media (max-width: 64em) {
+       font-size:2em;
+     }
+     @media (max-width:48em) {
+       font-size: 2em;
+       border-radius: 46.804px;
+     }
+     @media (max-width: 42.5em) {
+      font-size: 2em;
+     }
 `;
 const Title2 = styled.h1`
 //font-size: ${(props) => props.theme.fontxxl};
-font-size: 5em;
+font-size: 3em;
   text-transform: capitalize;
   color: rgb(255, 255, 255);
   display: flex;
@@ -67,16 +89,33 @@ font-size: 5em;
   height: 160px;
   /* float: right; */
   margin: 0 auto;
-  @media (max-width: 40em) {
-    font-size: 4em;
+  @media (max-width: 117.75em) { 
+    font-size:3em;
   }
-  @media (max-width: 1580px) {
-    font-size: 4em;
-  }
+  @media (max-width: 90.625em) { 
+    font-size: 3em; 
+   }
+   
+   @media (max-width: 85em) {
+    font-size:3em;
+      padding: 50px 30px;
+      border-radius: 40px;
+      margin-top: -20px;
+   }
+   @media (max-width: 64em) {
+     font-size:2em;
+   }
+   @media (max-width:48em) {
+     font-size: 2em;
+     border-radius: 46.804px;
+   }
+   @media (max-width: 42.5em) {
+    font-size: 2em;
+   }
 `;
 const Title1 = styled.h1`
   //font-size: ${(props) => props.theme.fontxxl};
-  font-size: 6em;
+  font-size: 3em;
     text-transform: capitalize;
     color: rgb(255, 255, 255);
     display: flex;
@@ -92,16 +131,33 @@ const Title1 = styled.h1`
     height: 160px;
     /* float: right; */
     margin: 0 auto;
-
-    @media (max-width: 40em) {
-      font-size: 4em;
+    @media (max-width: 117.75em) { 
+      font-size:3em;
     }
-    @media (max-width: 1580px) {
-      font-size: 4em;
-    }
+ 
+    @media (max-width: 90.625em) { 
+      font-size: 3em; 
+     }
+     
+     @media (max-width: 85em) {
+      font-size:3em;
+        padding: 50px 30px;
+        border-radius: 40px;
+        margin-top: -20px;
+     }
+     @media (max-width: 64em) {
+       font-size:2em;
+     }
+     @media (max-width:48em) {
+       font-size: 2em;
+       border-radius: 46.804px;
+     }
+     @media (max-width: 42.5em) {
+      font-size: 2em;
+     }
 `;
 const Title3 = styled.h1`
-font-size: 6em;
+font-size: 3em;
 text-transform: capitalize;
 color: rgb(255, 255, 255);
 display: flex;
@@ -116,12 +172,29 @@ padding: 30px 51px;
 border-radius: 85px;
 height: 160px;
 }
-@media (max-width: 40em) {
-  font-size: 4em;
-}
-@media (max-width: 1580px) {
-  font-size: 4em;
-}
+@media (max-width: 90.625em) { 
+  font-size: 3em; 
+ }
+ 
+ @media (max-width: 85em) {
+  font-size:3em;
+    padding: 50px 30px;
+    border-radius: 40px;
+    margin-top: -20px;
+ }
+ @media (max-width: 64em) {
+   font-size:2em;
+   height: 120px;
+   width: 180px;
+   margin-bottom: 10px;
+ }
+ @media (max-width:48em) {
+   font-size: 2em;
+   border-radius: 46.804px;
+ }
+ @media (max-width: 42.5em) {
+  font-size: 2em;
+ }
 `;
 
 const Container = styled.div`
@@ -163,11 +236,11 @@ overflow:hidden;
   }
 
   @media (max-width: 48em) {
-    width: 40%;
+    width: 100%;
   }
 
   @media (max-width: 30em) {
-    width: 70vw;
+    width:  100%;
   }
 `;
 const GradientText = styled.div`
@@ -274,10 +347,36 @@ const Subtitle = styled.h2`
   font-size: 2.5rem;
   width: 70%;
   line-height: 46px;
-  @media (max-width: 1580px) {
-    font-size:2em;
-    line-height: 35px;
-  }
+  @media (max-width: 90.625em) { 
+    font-size: 2em; 
+   }
+   
+   @media (max-width: 85em) {
+     font-size: 2em;
+     width: 95%;
+     padding-left: 0;
+     padding-top: 12px;
+     padding-bottom: 12px;
+     line-height: 36px;
+     padding-right: 12px;
+   }
+   @media (max-width: 64em) {
+    font-size: 1.5em;
+    line-height: 27px;
+   }
+   @media (max-width:48em) {
+
+    font-size: 1.5em;
+    line-height: 27px;
+    
+   }
+   @media (max-width: 42.5em) {
+     font-size: 1.5em;
+     width:100%;
+     font-size: 1.5em;
+     line-height: 27px;
+     padding: 30px 30px;
+   }
 `;
 const Subtitle2 = styled.h2`
   // font-size: ${(props) => props.theme.fontmd};
@@ -306,9 +405,35 @@ const Subtitle2 = styled.h2`
   width: 80%;
   line-height: 46px;
   padding-left: 40px;
-  @media (max-width: 1580px) {
-    font-size:2em;
-  }
+  @media (max-width: 90.625em) { 
+    font-size: 2em; 
+   }
+   
+   @media (max-width: 85em) {
+     font-size: 2em;
+     width: 95%;
+     line-height: 46px;
+     padding-left: 20px;
+     padding-top: 12px;
+     padding-bottom: 12px;
+   }
+   @media (max-width: 64em) {
+    font-size: 1.5em;
+    line-height: 27px;
+}
+   }
+   @media (max-width:48em) {
+     font-size: 2em;
+     padding: 49px 30px;
+     font-size: 1.5em;
+    line-height: 27px;
+}
+   }
+   @media (max-width: 42.5em) {
+     font-size: 1.5em;
+     width:100%;
+     padding: 30px 30px;
+   }
 `;
 const Subtitle1 = styled.h2`
   // font-size: ${(props) => props.theme.fontmd};
@@ -336,9 +461,36 @@ const Subtitle1 = styled.h2`
   font-size: 2.5rem;
   width: 70%;
   line-height: 46px;
-  @media (max-width: 1580px) {
-    font-size:2em;
-  }
+  @media (max-width: 90.625em) { 
+    font-size: 2em; 
+   }
+   
+   @media (max-width: 85em) {
+     font-size: 2em;
+     width: 95%;
+     line-height: 46px;
+     padding-left: 20px;
+     padding-top: 12px;
+     padding-bottom: 12px;
+   }
+   @media (max-width: 64em) {
+     font-size: 2em;
+     font-size: 1.5em;
+    line-height: 27px;
+}
+   }
+   @media (max-width:48em) {
+     font-size: 2em;
+     padding: 49px 30px;
+     font-size: 1.5em;
+    line-height: 27px;
+}
+   }
+   @media (max-width: 42.5em) {
+     font-size: 1.5em;
+     width:100%;
+     padding: 30px 30px;
+   }
 `;
 const Subtitle3 = styled.h2`
   // font-size: ${(props) => props.theme.fontmd};
@@ -368,16 +520,49 @@ const Subtitle3 = styled.h2`
   line-height: 46px;
   /* text-align: center; */
   padding-left: 80px;
-  @media (max-width: 1580px) {
-    font-size:2em;
-  }
+  @media (max-width: 90.625em) { 
+    font-size: 2em; 
+   }
+   
+   @media (max-width: 85em) {
+     font-size: 2em;
+     width: 95%;
+     line-height: 46px;
+     padding-left: 20px;
+     padding-top: 12px;
+     padding-bottom: 12px;
+   }
+   @media (max-width: 64em) {
+    font-size: 1.5em;
+    line-height: 27px;
+}
+   }
+   @media (max-width:48em) {
+    font-size: 1.5em;
+    line-height: 27px;
+}
+   }
+   @media (max-width: 42.5em) {
+     font-size: 1.5em;
+     width:100%;
+     padding: 30px 30px;
+   }
 `;
 const MemberComponent = ({ title = " ", name = " ", subtitle = " ", backgroundColor = "" }) => {
+
   return (
     <Item backgroundColor={backgroundColor}>
       <Name>{name}</Name>
-      <Title>{title}</Title>
-      <Subtitle>{subtitle}</Subtitle>
+     {/* <Title as="a" href="/Tokenomics">{title}</Title> */}
+    
+    
+
+    {/* <a href={Tokenomics}  rel="noreferrer"> */}
+    <Link onClick={()=>{<Navigate to ='/Tokenomics' />}} to ='/Tokenomics'><Title>{title}</Title></Link>
+
+        
+    {/* </a> */}
+    <Subtitle>{subtitle}</Subtitle>
     </Item>
   );
 };

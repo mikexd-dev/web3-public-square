@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "./Button";
+import { Link } from "react-router-dom"; 
 import Logo from "./Logo";
+
+
 
 const Section = styled.section`
   width: 100vw;
@@ -12,7 +15,6 @@ const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   width: 80%;
   height: ${(props) => props.theme.navHeight};
   margin: 0 auto;
@@ -161,6 +163,7 @@ const Navigation = () => {
           <MenuItem onClick={() => scrollTo("about")}>About</MenuItem>
           <MenuItem onClick={() => scrollTo("tracks")}>Tracks</MenuItem>
           <MenuItem onClick={() => scrollTo("team")}>Our Friends</MenuItem>
+        
           {/* <MenuItem onClick={() => scrollTo("roadmap")}>Connect</MenuItem>
           <MenuItem onClick={() => scrollTo("showcase")}>Showcase</MenuItem>
           <MenuItem onClick={() => scrollTo("team")}>Team</MenuItem> */}

@@ -10,6 +10,7 @@ import minaImg from "../../assets/mina-round.png";
 import polygonImg from "../../assets/polygon.png";
 import affinidiImg from "../../assets/affinidi.png";
 import blackImg from "../../assets/blackdog.png";
+import ecoImg from "../../assets/eco.png";
 import singporeImg from "../../assets/singpore.png";
 import Loading from "../Loading";
 
@@ -223,7 +224,7 @@ const Team = () => {
         <MemberComponent img={polygonImg} name="Polygon" position="" link="https://polygon.technology/" />
         <MemberComponent img={menyalaImg} name="Economics Design" position="" link="https://economicsdesign.com/" />
         <MemberComponent img={blackImg} name="Blockdaemon" position="" link="https://www.blockdaemon.com/" />
-        <MemberComponent img={singporeImg} name="ETH Singapore" position="" link="https://www.ethereumsingapore.com/" />
+        <MemberComponent img={ecoImg} name="ETH Singapore" position="" link="https://www.ethereumsingapore.com/" />
         {/* <MemberComponent img={ethImg} name="Ethereum Foundation" position="" /> */}
       </Container>
     </Section>
