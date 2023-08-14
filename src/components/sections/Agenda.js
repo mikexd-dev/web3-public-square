@@ -165,6 +165,8 @@ const Name = styled.h2`
   font-size: ${(props) => props.theme.fontlg};
   color: #ffecd5;
   font-weight: 500;
+  width:90%;
+  padding-left:20px;
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontmd};
   }
@@ -175,7 +177,8 @@ const Text = styled.h6`
   font-weight: 400;
   margin-bottom:15px;
   width:80%;
-  text-align:right;
+  padding-left:20px;
+  text-align:left;
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontmd};
   }
@@ -214,7 +217,7 @@ const Team = () => {
             <Time>7:15pm</Time>
             <Name>Session 1</Name>
           </Item>
-          <Item style={{width:"100%",justifyContent:"flex-end",alignItems:"flex-end",flexDirection:"column"}}>
+          <Item style={{width:"100%",justifyContent:"flex-end",flexDirection:"column"}}>
             <Text>Track 1 Tokenomics: How to design a sustainable token-based economy from early stage to growth</Text>
             <Text> Track 2 Zero Knowledge: Use cases and ZKEVM</Text>
             </Item>
@@ -226,7 +229,7 @@ const Team = () => {
             <Time>8:15pm</Time>
             <Name>Session 2</Name>
           </Item>
-          <Item style={{width:"100%",justifyContent:"flex-end",alignItems:"flex-end",flexDirection:"column"}}>
+          <Item style={{width:"100%",justifyContent:"flex-end",flexDirection:"column"}}>
             <Text>Track 3 Building for the Future: Unraveling Wallets, Intents, and MEV in next wave adoption</Text>
             <Text>Track 4 MEV: A deep dive into blockspace market structure</Text>
             </Item>

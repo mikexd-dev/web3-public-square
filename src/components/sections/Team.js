@@ -222,9 +222,9 @@ const Team = () => {
         <MemberComponent img={menyalaImg} name="Menyala" position="" link="https://www.menyala.com/" />
         <MemberComponent img={monkeDAOImg} name="MonkeDAO" position="" link="https://monkedao.io/" />
         <MemberComponent img={polygonImg} name="Polygon" position="" link="https://polygon.technology/" />
-        <MemberComponent img={menyalaImg} name="Economics Design" position="" link="https://economicsdesign.com/" />
+        <MemberComponent img={ecoImg} name="Economics Design" position="" link="https://economicsdesign.com/" />
         <MemberComponent img={blackImg} name="Blockdaemon" position="" link="https://www.blockdaemon.com/" />
-        <MemberComponent img={ecoImg} name="ETH Singapore" position="" link="https://www.ethereumsingapore.com/" />
+        <MemberComponent img={singporeImg} name="ETH Singapore" position="" link="https://www.ethereumsingapore.com/" />
         {/* <MemberComponent img={ethImg} name="Ethereum Foundation" position="" /> */}
       </Container>
     </Section>

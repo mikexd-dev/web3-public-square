@@ -26,7 +26,7 @@ const Tokenomics = () => {
     <>
 
  
-    <BuildingFuture />
+    <Economicdesign />
     </>
   );
 };

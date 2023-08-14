@@ -236,7 +236,7 @@ const TypeWriterText = () => {
       <Title>
         Curated space in Singapore for talents to <br></br>
         <Typewriter
-            words={[" learn buidl and network ,"]}
+            words={[" learn buidl and network"]}
             loop={500}
             cursor
             cursorStyle= '_'
