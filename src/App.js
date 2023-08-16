@@ -42,7 +42,7 @@ function App() {
  <main>
       <GlobalStyles />
       <ThemeProvider theme={dark}>
-        {/* <Tokenomics /> */}
+       {/* <Tokenomics /> */}
         <Home />
         <BannerSG />
         <Agenda />
