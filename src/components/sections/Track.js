@@ -8,6 +8,7 @@ import futureOfWorkImage from "../../assets/future-of-work.png";
 import Loading from "../Loading";
 
 
+
 // import ConfettiComponent from '../Confetti';
 import { useMediaQuery } from "react-responsive";
 import Tokenomics from "../../pages/Tokenomics";
@@ -558,8 +559,8 @@ const MemberComponent = ({ title = " ", name = " ", subtitle = " ", backgroundCo
     
 
     {/* <a href={Tokenomics}  rel="noreferrer"> */}
-    <Link onClick={()=>{<Navigate to ='/Tokenomics' />}} to ='/Tokenomics'><Title>{title}</Title></Link>
-
+    {/* <Link onClick={()=>{<Navigate to ='https://chat.openai.com/' />}}><Title>{title}</Title></Link> */}
+    <Link to="/economicdesign"><Title>{title}</Title></Link>
         
     {/* </a> */}
     <Subtitle>{subtitle}</Subtitle>
@@ -571,7 +572,7 @@ const MemberComponent1 = ({ title1 = " ", name = " ", subtitle1 = " ", backgroun
   return (
     <Item backgroundColor={backgroundColor}>
       <Name>{name}</Name>
-      <Title1 color={color}>{title1}</Title1>
+      <Link to="/zeroKnowledge"> <Title1 color={color}>{title1}</Title1></Link>
       <Subtitle1>{subtitle1}</Subtitle1>
     </Item>
   );
@@ -580,7 +581,7 @@ const MemberComponent2 = ({ title2 = " ", name = " ", subtitle2 = " ", backgroun
   return (
     <Item backgroundColor={backgroundColor}>
       <Name>{name}</Name>
-      <Title2>{title2}</Title2>
+      <Link to="/Buildingfuture"> <Title2>{title2}</Title2></Link>
       <Subtitle2>{subtitle2}</Subtitle2>
     </Item>
   );
@@ -589,7 +590,7 @@ const MemberComponent3 = ({ title3 = " ", name = " ", subtitle3 = " ", backgroun
   return (
     <Item backgroundColor={backgroundColor}>
       <Name>{name}</Name>
-      <Title3>{title3}</Title3>
+      <Link to="/mev"> <Title3>{title3}</Title3></Link>
       <Subtitle3>{subtitle3}</Subtitle3>
     </Item>
   );

@@ -165,26 +165,27 @@ const Name = styled.h2`
   font-size: ${(props) => props.theme.fontlg};
   color: #ffecd5;
   font-weight: 500;
-  width:90%;
+  width:89%;
   padding-left:20px;
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontmd};
   }
 `;
 const Text = styled.h6`
-  font-size: 1.2em;
-  color: #fff;
-  font-weight: 400;
-  margin-bottom:15px;
-  width:80%;
-  padding-left:20px;
-  text-align:left;
+font-size: ${(props) => props.theme.fontlg};
+color: #fff;
+font-weight: 500;
+width:89%;
+padding-left:20px;
+@media (max-width: 48em) {
+  font-size: ${(props) => props.theme.fontmd};
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontmd};
   }
 `;
 const Time = styled.h2`
   font-size: ${(props) => props.theme.fontlg};
+  width:81px;
   color: ${(props) => props.theme.text};
   font-weight: 400;
   @media (max-width: 48em) {
@@ -217,10 +218,15 @@ const Team = () => {
             <Time>7:15pm</Time>
             <Name>Session 1</Name>
           </Item>
-          <Item style={{width:"100%",justifyContent:"flex-end",flexDirection:"column"}}>
+          <Item>
+            <Time></Time>
             <Text>Track 1 Tokenomics: How to design a sustainable token-based economy from early stage to growth</Text>
-            <Text> Track 2 Zero Knowledge: Use cases and ZKEVM</Text>
-            </Item>
+          </Item>
+          <Item>
+            <Time></Time>
+            <Text>Track 2 Zero Knowledge: Use cases and ZKEVM</Text>
+          </Item>
+
           <Item>
             <Time>8:00pm</Time>
             <Name>Break</Name>
@@ -229,10 +235,15 @@ const Team = () => {
             <Time>8:15pm</Time>
             <Name>Session 2</Name>
           </Item>
-          <Item style={{width:"100%",justifyContent:"flex-end",flexDirection:"column"}}>
+          <Item>
+            <Time></Time>
             <Text>Track 3 Building for the Future: Unraveling Wallets, Intents, and MEV in next wave adoption</Text>
+          </Item>
+          <Item>
+            <Time></Time>
             <Text>Track 4 MEV: A deep dive into blockspace market structure</Text>
-            </Item>
+          </Item>
+         
           <Item>
             <Time>9:00pm</Time>
             <Name>Drinks/Food/Mingle</Name>
