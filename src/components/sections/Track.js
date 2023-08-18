@@ -1,13 +1,17 @@
-import React, { lazy, Suspense, } from "react";
+import React, { lazy, Suspense } from "react";
 import styled from "styled-components";
-import { BrowserRouter as Router, Route, Switch, Link, Navigate } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  Navigate,
+} from "react-router-dom";
 import smartContractImage from "../../assets/smart-contract.png";
 import minaImage from "../../assets/Mina Logo.jpeg";
 import web3DesignImage from "../../assets/design-web3.png";
 import futureOfWorkImage from "../../assets/future-of-work.png";
 import Loading from "../Loading";
-
-
 
 // import ConfettiComponent from '../Confetti';
 import { useMediaQuery } from "react-responsive";
@@ -17,8 +21,8 @@ const Scene = lazy(() => import("../Scene"));
 const Section = styled.section`
   min-height: 100vh;
   width: 100vw;
- background-color: ${(props) => props.theme.background};
- // background-color: red;
+  background-color: ${(props) => props.theme.background};
+  // background-color: red;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -28,53 +32,53 @@ const Section = styled.section`
 const Title = styled.h1`
   font-size: ${(props) => props.theme.fontxxl};
   text-transform: capitalize;
-  color: #FFF;
+  color: #fff;
   display: flex;
-font-size: 3em;
-    text-transform: capitalize;
-    color:${props => props.color || props.theme.color};;
-    display: flex;
-    -webkit-box-pack: end;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    width: 75%;
-    background-color: rgb(255, 148, 91);
-    /* align-self: flex-start; */
-    padding: 29px 51px;
-    border-radius: 72px;
-    height: 160px;
-    float: right;
-    margin-right: -28px;
-    @media (max-width: 117.75em) { 
-      font-size:3em;
-    }
-    @media (max-width: 90.625em) { 
-      font-size: 3em; 
-     }
-     
-     @media (max-width: 85em) {
-      font-size:3em;
-        padding: 50px 30px;
-        border-radius: 40px;
-        margin-top: -20px;
-        margin-right: 0px;
-        margin-left: 0px;
-     }
-     @media (max-width: 64em) {
-       font-size:2em;
-     }
-     @media (max-width:48em) {
-       font-size: 2em;
-       border-radius: 46.804px;
-     }
-     @media (max-width: 42.5em) {
-      font-size: 2em;
-     }
+  font-size: 3em;
+  text-transform: capitalize;
+  color: ${(props) => props.color || props.theme.color};
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 75%;
+  background-color: rgb(255, 148, 91);
+  /* align-self: flex-start; */
+  padding: 29px 51px;
+  border-radius: 72px;
+  height: 160px;
+  float: right;
+  margin-right: -28px;
+  @media (max-width: 117.75em) {
+    font-size: 3em;
+  }
+  @media (max-width: 90.625em) {
+    font-size: 3em;
+  }
+
+  @media (max-width: 85em) {
+    font-size: 3em;
+    padding: 50px 30px;
+    border-radius: 40px;
+    margin-top: -20px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  @media (max-width: 64em) {
+    font-size: 2em;
+  }
+  @media (max-width: 48em) {
+    font-size: 2em;
+    border-radius: 46.804px;
+  }
+  @media (max-width: 42.5em) {
+    font-size: 2em;
+  }
 `;
 const Title2 = styled.h1`
-//font-size: ${(props) => props.theme.fontxxl};
-font-size: 3em;
+  //font-size: ${(props) => props.theme.fontxxl};
+  font-size: 3em;
   text-transform: capitalize;
   color: rgb(255, 255, 255);
   display: flex;
@@ -84,78 +88,78 @@ font-size: 3em;
   align-items: center;
   margin: 0px -28px 0px 0px;
   width: 75%;
-  background-color: #5B8AFF;
+  background-color: #5b8aff;
   padding: 37px 51px;
   border-radius: 72px;
   height: 160px;
   /* float: right; */
   margin: 0 auto;
-  @media (max-width: 117.75em) { 
-    font-size:3em;
+  @media (max-width: 117.75em) {
+    font-size: 3em;
   }
-  @media (max-width: 90.625em) { 
-    font-size: 3em; 
-   }
-   
-   @media (max-width: 85em) {
-    font-size:3em;
-      padding: 50px 30px;
-      border-radius: 40px;
-      margin-top: -20px;
-   }
-   @media (max-width: 64em) {
-     font-size:2em;
-   }
-   @media (max-width:48em) {
-     font-size: 2em;
-     border-radius: 46.804px;
-   }
-   @media (max-width: 42.5em) {
+  @media (max-width: 90.625em) {
+    font-size: 3em;
+  }
+
+  @media (max-width: 85em) {
+    font-size: 3em;
+    padding: 50px 30px;
+    border-radius: 40px;
+    margin-top: -20px;
+  }
+  @media (max-width: 64em) {
     font-size: 2em;
-   }
+  }
+  @media (max-width: 48em) {
+    font-size: 2em;
+    border-radius: 46.804px;
+  }
+  @media (max-width: 42.5em) {
+    font-size: 2em;
+  }
 `;
 const Title1 = styled.h1`
   //font-size: ${(props) => props.theme.fontxxl};
   font-size: 3em;
-    text-transform: capitalize;
-    color: rgb(255, 255, 255);
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    margin: 0px -28px 0px 0px;
-    width: 72%;
-    background-color: rgb(231, 85, 255);
-    padding: 37px 51px;
-    border-radius: 72px;
-    height: 160px;
-    /* float: right; */
-    margin: 0 auto;
-    @media (max-width: 117.75em) { 
-      font-size:3em;
-    }
- 
-    @media (max-width: 90.625em) { 
-      font-size: 3em; 
-     }
-     
-     @media (max-width: 85em) {
-      font-size:3em;
-        padding: 50px 30px;
-        border-radius: 40px;
-        margin-top: -20px;
-     }
-     @media (max-width: 64em) {
-       font-size:2em;
-     }
-     @media (max-width:48em) {
-       font-size: 2em;
-       border-radius: 46.804px;
-     }
-     @media (max-width: 42.5em) {
-      font-size: 2em;
-     }
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0px -28px 0px 0px;
+  width: 72%;
+  background-color: rgb(231, 85, 255);
+  padding: 37px 51px;
+  border-radius: 72px;
+  height: 160px;
+  /* float: right; */
+  margin: 0 auto;
+  @media (max-width: 117.75em) {
+    font-size: 3em;
+  }
+
+  @media (max-width: 90.625em) {
+    font-size: 3em;
+  }
+
+  @media (max-width: 85em) {
+    font-size: 3em;
+    padding: 50px 30px;
+    border-radius: 40px;
+    margin-top: -20px;
+  }
+  @media (max-width: 64em) {
+    font-size: 2em;
+  }
+  @media (max-width: 48em) {
+    font-size: 2em;
+    border-radius: 46.804px;
+  }
+  @media (max-width: 42.5em) {
+    font-size: 2em;
+  }
 `;
 const Title3 = styled.h1`
 font-size: 3em;
@@ -217,24 +221,32 @@ const Container = styled.div`
   }
 `;
 
-
 const Item = styled.div`
-background-color: ${props => props.backgroundColor || props.theme.background};
+  background-color: ${(props) =>
+    props.backgroundColor || props.theme.background};
   width: 45%;
-  min-height:610px;
+  min-height: 610px;
   padding: 1rem 0 3rem;
   color: ${(props) => props.theme.body};
   margin: 2rem 0rem;
   position: relative;
   z-index: 5;
-overflow:hidden;
+  overflow: hidden;
   backdrop-filter: blur(4px);
   border-radius: 20px;
 
   &:hover {
-    img {
-      transform: translateY(-1rem) scale(1.1);
-    }
+    transform: translateY(-1rem) scale(1.05);
+    transition: all 0.5s ease;
+  }
+
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 300px;
+    transition: all 0.3s ease;
+    border-radius: 20px;
   }
 
   @media (max-width: 48em) {
@@ -242,7 +254,7 @@ overflow:hidden;
   }
 
   @media (max-width: 30em) {
-    width:  100%;
+    width: 100%;
   }
 `;
 const GradientText = styled.div`
@@ -313,14 +325,14 @@ const ImageContainer = styled.div`
 
 const Name = styled.h2`
   // font-size: ${(props) => props.theme.fontlg};
-  font-size:  2.6em;
+  font-size: 2.6em;
   text-align: left;
   color: #581500;
   margin-top: 1rem;
-  font-weight:400;
+  font-weight: 400;
   margin-bottom: 30px;
   margin-top: 21px;
-  padding-left:15px;
+  padding-left: 15px;
 `;
 
 const Subtitle = styled.h2`
@@ -330,7 +342,7 @@ const Subtitle = styled.h2`
   // justify-content: center;
   // text-transform: capitalize;
   // float:left;
- 
+
   // color: ${(props) => `rgba(${props.theme.textRgba},0.9)`};
   // font-weight: 400;
   display: flex;
@@ -349,36 +361,34 @@ const Subtitle = styled.h2`
   font-size: 2.5rem;
   width: 70%;
   line-height: 46px;
-  @media (max-width: 90.625em) { 
-    font-size: 2em; 
-   }
-   
-   @media (max-width: 85em) {
-     font-size: 2em;
-     width: 95%;
-     padding-left: 0;
-     padding-top: 12px;
-     padding-bottom: 12px;
-     line-height: 36px;
-     padding-right: 12px;
-   }
-   @media (max-width: 64em) {
-    font-size: 1.5em;
-    line-height: 27px;
-   }
-   @media (max-width:48em) {
+  @media (max-width: 90.625em) {
+    font-size: 2em;
+  }
 
+  @media (max-width: 85em) {
+    font-size: 2em;
+    width: 95%;
+    padding-left: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    line-height: 36px;
+    padding-right: 12px;
+  }
+  @media (max-width: 64em) {
     font-size: 1.5em;
     line-height: 27px;
-    
-   }
-   @media (max-width: 42.5em) {
-     font-size: 1.5em;
-     width:100%;
-     font-size: 1.5em;
-     line-height: 27px;
-     padding: 30px 30px;
-   }
+  }
+  @media (max-width: 48em) {
+    font-size: 1.5em;
+    line-height: 27px;
+  }
+  @media (max-width: 42.5em) {
+    font-size: 1.5em;
+    width: 100%;
+    font-size: 1.5em;
+    line-height: 27px;
+    padding: 30px 30px;
+  }
 `;
 const Subtitle2 = styled.h2`
   // font-size: ${(props) => props.theme.fontmd};
@@ -550,48 +560,79 @@ const Subtitle3 = styled.h2`
      padding: 30px 30px;
    }
 `;
-const MemberComponent = ({ title = " ", name = " ", subtitle = " ", backgroundColor = "" }) => {
-
+const MemberComponent = ({
+  title = " ",
+  name = " ",
+  subtitle = " ",
+  backgroundColor = "",
+}) => {
   return (
     <Item backgroundColor={backgroundColor}>
       <Name>{name}</Name>
-     {/* <Title as="a" href="/Tokenomics">{title}</Title> */}
-    
-    
+      {/* <Title as="a" href="/Tokenomics">{title}</Title> */}
 
-    {/* <a href={Tokenomics}  rel="noreferrer"> */}
-    {/* <Link onClick={()=>{<Navigate to ='https://chat.openai.com/' />}}><Title>{title}</Title></Link> */}
-    <Link to="/economicdesign"><Title>{title}</Title></Link>
-        
-    {/* </a> */}
-    <Subtitle>{subtitle}</Subtitle>
+      {/* <a href={Tokenomics}  rel="noreferrer"> */}
+      {/* <Link onClick={()=>{<Navigate to ='https://chat.openai.com/' />}}><Title>{title}</Title></Link> */}
+      <Link to="/economicdesign">
+        <Title>{title}</Title>
+      </Link>
+
+      {/* </a> */}
+      <Subtitle>{subtitle}</Subtitle>
     </Item>
   );
 };
 
-const MemberComponent1 = ({ title1 = " ", name = " ", subtitle1 = " ", backgroundColor = "", color = "" }) => {
+const MemberComponent1 = ({
+  title1 = " ",
+  name = " ",
+  subtitle1 = " ",
+  backgroundColor = "",
+  color = "",
+}) => {
   return (
     <Item backgroundColor={backgroundColor}>
       <Name>{name}</Name>
-      <Link to="/zeroKnowledge"> <Title1 color={color}>{title1}</Title1></Link>
+      <Link to="/zeroKnowledge">
+        {" "}
+        <Title1 color={color}>{title1}</Title1>
+      </Link>
       <Subtitle1>{subtitle1}</Subtitle1>
     </Item>
   );
 };
-const MemberComponent2 = ({ title2 = " ", name = " ", subtitle2 = " ", backgroundColor = "", color = "" }) => {
+const MemberComponent2 = ({
+  title2 = " ",
+  name = " ",
+  subtitle2 = " ",
+  backgroundColor = "",
+  color = "",
+}) => {
   return (
     <Item backgroundColor={backgroundColor}>
       <Name>{name}</Name>
-      <Link to="/Buildingfuture"> <Title2>{title2}</Title2></Link>
+      <Link to="/Buildingfuture">
+        {" "}
+        <Title2>{title2}</Title2>
+      </Link>
       <Subtitle2>{subtitle2}</Subtitle2>
     </Item>
   );
 };
-const MemberComponent3 = ({ title3 = " ", name = " ", subtitle3 = " ", backgroundColor = "", color = "" }) => {
+const MemberComponent3 = ({
+  title3 = " ",
+  name = " ",
+  subtitle3 = " ",
+  backgroundColor = "",
+  color = "",
+}) => {
   return (
     <Item backgroundColor={backgroundColor}>
       <Name>{name}</Name>
-      <Link to="/mev"> <Title3>{title3}</Title3></Link>
+      <Link to="/mev">
+        {" "}
+        <Title3>{title3}</Title3>
+      </Link>
       <Subtitle3>{subtitle3}</Subtitle3>
     </Item>
   );
@@ -677,29 +718,29 @@ const Team = () => {
           img={futureOfWorkImage}
           name="DAOs: The Future of Work"
         /> */}
-      <MemberComponent
-      backgroundColor="#FFE4C9"
-         name="Track #1"
-         title="Tokenomics"
-         subtitle="How to design a sustainable token-based economy from early stage to growth"
+        <MemberComponent
+          backgroundColor="#FFE4C9"
+          name="Track #1"
+          title="Tokenomics"
+          subtitle="How to design a sustainable token-based economy from early stage to growth"
         />
-        <MemberComponent1 
-        backgroundColor="#F0DDFF"
-         name="Track #2"
-         title1="Zero Knowledge"
-         subtitle1="Use cases and ZKEVM"
+        <MemberComponent1
+          backgroundColor="#F0DDFF"
+          name="Track #2"
+          title1="Zero Knowledge"
+          subtitle1="Use cases and ZKEVM"
         />
-         <MemberComponent2
-      backgroundColor="#C1D2F9"
-         name="Track #3"
-         title2="Building for the Future"
-         subtitle2="Unraveling Wallets, Intents, and MEV in next wave adoption"
+        <MemberComponent2
+          backgroundColor="#C1D2F9"
+          name="Track #3"
+          title2="Building for the Future"
+          subtitle2="Unraveling Wallets, Intents, and MEV in next wave adoption"
         />
         <MemberComponent3
-        backgroundColor="#FFBFC3"
-         name="Track #4"
-         title3="MEV"
-         subtitle3="A deep dive into blockspace market structure"
+          backgroundColor="#FFBFC3"
+          name="Track #4"
+          title3="MEV"
+          subtitle3="A deep dive into blockspace market structure"
         />
       </Container>
     </Section>
