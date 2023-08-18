@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import LogoImg from "../assets/logo-white.png";
+import LogoImg from "../assets/Subtract-Logo.png";
 
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
@@ -148,7 +148,8 @@ const Logo = () => {
             },
           }}
         /> */}
-        <img src={LogoImg} width={88} height={116} />
+        {/* <img src={LogoImg} width={88} height={116} /> */}
+        <img src={LogoImg} width={88} />
       </Link>
     </LogoText>
   );
