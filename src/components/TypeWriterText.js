@@ -2,25 +2,27 @@ import React from "react";
 import styled from "styled-components";
 import Countdown from "react-countdown";
 // import Typewriter from "typewriter-effect";
-import { Typewriter } from 'react-simple-typewriter'
+import { Typewriter } from "react-simple-typewriter";
 
 import Button from "./Button";
 const TypewriterCursor = styled.span`
-display: inline-block;
-width: 1px; /* Set the width of the cursor */
-height: ${props => props.theme.fontSize}; /* Set the height of the cursor */
-background-color: ${props => props.theme.typewriterCursorColor}; /* Set the cursor color */
-margin-left: 2px; /* Adjust the spacing between cursor and text */
-animation: blink 0.7s infinite; /* Add a blinking animation */
+  display: inline-block;
+  width: 1px; /* Set the width of the cursor */
+  height: ${(props) => props.theme.fontSize}; /* Set the height of the cursor */
+  background-color: ${(props) =>
+    props.theme.typewriterCursorColor}; /* Set the cursor color */
+  margin-left: 2px; /* Adjust the spacing between cursor and text */
+  animation: blink 0.7s infinite; /* Add a blinking animation */
 
-@keyframes blink {
-  0%, 100% {
-    opacity: 0;
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
   }
-  50% {
-    opacity: 1;
-  }
-}
 `;
 
 const Title = styled.h1`
@@ -124,6 +126,7 @@ const RowContainer = styled.div`
   flex-wrap: wrap;
   width: 100%;
   padding-top: 3rem;
+  padding-bottom: 3rem;
 
   #col1 {
     width: 20%;
@@ -179,8 +182,7 @@ const CountdownContainer = styled.div`
   justify-content: flex-end;
   align-items: center;
   padding-right: 10px;
-
-  @media (max-width: 30em) {
+  padding-left: 10px @media (max-width: 30em) {
     width: 15%;
   }
 `;
@@ -232,18 +234,17 @@ const TypeWriterText = () => {
 
   return (
     <>
-   
       <Title>
         Curated space in Singapore for talents to <br></br>
         <Typewriter
-            words={[" learn, buidl and network"]}
-            loop={500}
-            cursor
-            cursorStyle= '_'
-            typeSpeed={70}
-            deleteSpeed={50}
-            delaySpeed={1000}
-          />
+          words={[" learn, buidl and network"]}
+          loop={500}
+          cursor
+          cursorStyle="_"
+          typeSpeed={70}
+          deleteSpeed={50}
+          delaySpeed={1000}
+        />
         {/* <Typewriter
           options={{
             autoStart: true,
@@ -264,12 +265,11 @@ const TypeWriterText = () => {
           cursor
           cursorStyle='_'
         /> */}
-  
       </Title>
       <RowContainer>
         <ColumnContainer id="col1">
           <SubTitleXXS>Where</SubTitleXXS>
-          <SubTitle style={{ width: "100%",marginTop:12 }}>
+          <SubTitle style={{ width: "100%", marginTop: 12 }}>
             {/* WeWork @ 21 Collyer Quay */}
             UE Square Wework Level 2, 83 Clemenceau Ave, Singapore 239920
           </SubTitle>
@@ -277,11 +277,11 @@ const TypeWriterText = () => {
         </ColumnContainer>
         <ColumnContainer id="col2">
           <SubTitleXXS>When</SubTitleXXS>
-          <SubTitle style={{ width: "100%",marginTop:12 }}>
+          <SubTitle style={{ width: "100%", marginTop: 12 }}>
             {/* Sept 27, 2022 @6:30pm */}
             6:30pm - 10:30pm
-            </SubTitle>
-          <Countdown date={"2022-09-27T18:00:00"} renderer={renderer} />
+          </SubTitle>
+          <Countdown date={"2023-09-11T18:30:00"} renderer={renderer} />
         </ColumnContainer>
         <ColumnContainer>
           <Button text="RSVP" link="https://lu.ma/z61zqi4v" />

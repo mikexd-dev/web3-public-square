@@ -1,7 +1,7 @@
 import GlobalStyles from "./styles/GlobalStyles";
 import { light, dark } from "./styles/Themes";
 import { ThemeProvider } from "styled-components";
-import { BrowserRouter,Routes, Route  } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // import { lazy, Suspense } from "react";
 // import Loading from "./components/Loading";
@@ -31,7 +31,7 @@ import Faq from "./components/sections/Faq";
 import Track from "./components/sections/Track";
 import ScrollToTop from "./components/ScrollToTop";
 import Tokenomics from "./pages/Tokenomics";
-import Homenew from './pages/Homenew';
+import Homenew from "./pages/Homenew";
 import Economicdesign from "./components/sections/Economicdesign";
 import ZeroKnowledge from "./components/sections/ZeroKnowledge";
 import Mev from "./components/sections/Mev";
@@ -39,23 +39,19 @@ import BuildingFuture from "./components/sections/BuildingFuture";
 
 function App() {
   return (
-
-  
-    
- 
- <main>
+    <main>
       <GlobalStyles />
       <ThemeProvider theme={dark}>
-   <Routes>
-   {/* <Route path="/" component={Homenew} exact /> */}
-        <Route path="/" element={<Homenew/>} />
-        <Route path="/Buildingfuture" element={<BuildingFuture/>} />
-        <Route path="/zeroKnowledge" element={<ZeroKnowledge/>} />
-        <Route path="/economicdesign" element={<Economicdesign/>} />
-        <Route path="/mev" element={<Mev/>} />
-      </Routes> 
-    
-{/*  
+        <Routes>
+          {/* <Route path="/" component={Homenew} exact /> */}
+          <Route path="/" element={<Homenew />} />
+          <Route path="/Buildingfuture" element={<BuildingFuture />} />
+          <Route path="/zeroKnowledge" element={<ZeroKnowledge />} />
+          <Route path="/economicdesign" element={<Economicdesign />} />
+          <Route path="/mev" element={<Mev />} />
+        </Routes>
+
+        {/*  
       <Home />
         <BannerSG />
         <Agenda />
@@ -64,27 +60,17 @@ function App() {
         <Footer />
     
         <ScrollToTop />  */}
-        </ThemeProvider>
+      </ThemeProvider>
 
-
-
-
-
-
-
-
-         {/* <Suspense fallback={<Loading />}> */}
-        {/* <Navigation /> */}
-        {/* <About />
+      {/* <Suspense fallback={<Loading />}> */}
+      {/* <Navigation /> */}
+      {/* <About />
         <Roadmap />
         <Showcase /> */}
-        {/* <Faq /> */}
-        {/* <ScrollToTop scrollPosition={y}/> */}
-        {/* </Suspense> */}
-     
-      
+      {/* <Faq /> */}
+      {/* <ScrollToTop scrollPosition={y}/> */}
+      {/* </Suspense> */}
     </main>
-
   );
 }
 
