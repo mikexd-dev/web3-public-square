@@ -279,7 +279,7 @@ const TypeWriterText = () => {
           <SubTitleXXS>When</SubTitleXXS>
           <SubTitle style={{ width: "100%", marginTop: 12 }}>
             {/* Sept 27, 2022 @6:30pm */}
-            6:30pm - 10:30pm
+            Sept 11, 2023 @ 6:30pm
           </SubTitle>
           <Countdown date={"2023-09-11T18:30:00"} renderer={renderer} />
         </ColumnContainer>
