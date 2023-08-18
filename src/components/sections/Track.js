@@ -221,6 +221,7 @@ const Container = styled.div`
 const Item = styled.div`
 background-color: ${props => props.backgroundColor || props.theme.background};
   width: 45%;
+  min-height:610px;
   padding: 1rem 0 3rem;
   color: ${(props) => props.theme.body};
   margin: 2rem 0rem;
